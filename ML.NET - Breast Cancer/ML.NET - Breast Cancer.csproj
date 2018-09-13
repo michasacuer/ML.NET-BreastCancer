@@ -5,4 +5,13 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Accord.DataSets" Version="3.8.0" />
+    <PackageReference Include="Microsoft.ML" Version="0.5.0" />
+  </ItemGroup>
+
 </Project>

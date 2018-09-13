@@ -1,4 +1,6 @@
 ﻿using System;
+using Accord.DataSets;
+using Microsoft.ML;
 
 namespace ML.NET___Breast_Cancer
 {
@@ -6,7 +8,9 @@ namespace ML.NET___Breast_Cancer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");//
+            var pipeline = new LearningPipeline();
+            
+            Console.WriteLine("Hello World!");
         }
     }
 }
