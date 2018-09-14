@@ -5,7 +5,7 @@ https://www.kaggle.com/sarahvch/breast-cancer-wisconsin-prognostic-data-set
 
 With this model, we can get 98,5% of accuracy
 
-![Scheme](ML.NET_-_Breast_Cancer/breastcancer.PNG)
+![Scheme](ML.NET%20-%20Breast%20Cancer/breastcancer.PNG/breastcancer.PNG)
 
 # TODO:
 
