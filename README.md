@@ -9,7 +9,7 @@ With this model, we can get 98,3% of accuracy
 
 # Good to know...
 
-That data is not "normalized", i mean, i set into program all data that i get from set (all 32 features). I think we can get more accuracy by deleting some features that is not very important to make model work (for example, feature that his range is low, something like 0.5-0.8)
+That data is not "normalized", i mean, i set into program all data that i get from set (all 32 features). I think we can get more accuracy by deleting some features that is not very important to make model work (for example, feature that his range is low, something like 0.5-0.8). Fun Fact, randomly deleting features from model gives me 98,5% accuracy. 0,2% more than with all features in model!
 
 # TODO:
 
