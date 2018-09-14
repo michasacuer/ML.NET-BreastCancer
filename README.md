@@ -7,4 +7,8 @@ With this model, we can get 98,5% of accuracy
 
 ![Scheme](ML.NET_-_Breast_Cancer/breastcancer.PNG)
 
+# TODO:
 
+- Predictions
+- User Interface
+- exceptions
