@@ -13,6 +13,7 @@ That data is not "normalized", i mean, i set into program all data that i get fr
 
 # TODO:
 
+- Normalization
 - Predictions
 - User Interface
 - exceptions
