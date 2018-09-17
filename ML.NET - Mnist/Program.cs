@@ -1,4 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.ML;
+using Accord.DataSets;
 
 namespace ML.NET___Mnist
 {
@@ -6,7 +12,8 @@ namespace ML.NET___Mnist
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MNIST dataset = new MNIST();
+            Console.ReadLine();
         }
     }
 }
