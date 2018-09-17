@@ -13,3 +13,7 @@ With this model, we can get 98,3% of accuracy
 - Predictions
 - User Interface
 - exceptions
+
+# ML.NET- Mnist
+
+Comnig soon!
