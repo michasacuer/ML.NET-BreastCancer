@@ -7,7 +7,7 @@ With this model, we can get 98,3% of accuracy
 
 ![My image](https://github.com/michasacuer/ML.NET-Breast-Cancer/blob/master/ML.NET%20-%20Breast%20Cancer/breastcancer.PNG)
 
-# TODO:
+### TODO:
 
 - Normalization
 - Predictions
