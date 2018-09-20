@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ML.NET___Mnist.Functions
+namespace ML.NET___Mnist.MnistReader
 {
-    class MnistReader
+    class Load
     {
     }
 }
