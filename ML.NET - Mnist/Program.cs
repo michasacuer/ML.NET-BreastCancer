@@ -12,8 +12,7 @@ namespace ML.NET___Mnist
     {
         static void Main(string[] args)
         {
-            MNIST dataset = new MNIST();
-            Console.ReadLine();
+
         }
     }
 }
