@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="Accord.DataSets" Version="3.8.0" />
-    <PackageReference Include="Microsoft.ML" Version="0.5.0" />
+    <PackageReference Include="Microsoft.ML" Version="0.10.0" />
   </ItemGroup>
 
   <ItemGroup>
