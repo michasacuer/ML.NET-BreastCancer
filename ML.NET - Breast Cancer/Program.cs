@@ -14,7 +14,15 @@ namespace ML.NET___Breast_Cancer
         static void Main(string[] args)
         {
             var mlContext = new MLContext();
-            var trainData = mlContext.Data.ReadFromTextFile<CancerData>("Cancer-Train.csv", hasHeader: true, separatorChar: ';');
+            var trainData = mlContext.Data.ReadFromTextFile<CancerData>("Cancer-train.csv", hasHeader: true, separatorChar: ';');
+            var pipeline = mlContext.Transforms.Normalize("Features")
+                .AppendCacheCheckpoint(mlContext)
+                .Append(mlContext.BinaryClassification.Trainers.StochasticDualCoordinateAscent(labelColumn: "Target", featureColumn: "Features"));
+
+            var model = pipeline.Fit(trainData);
+
+            var testData = mlContext.Data.ReadFromTextFile<CancerData>("Cancer-test.csv", hasHeader: true, separatorChar: ';');
+            var metrics = mlContext.BinaryClassification.Evaluate(model.Transform(testData), label: "Target");
             //PredictionModel<CancerData, CancerPrediction> model = Train();
             //Evaluate(model);
         }
