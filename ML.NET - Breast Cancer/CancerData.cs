@@ -1,6 +1,5 @@
 ﻿using Microsoft.ML.Data;
 
-
 namespace ML.NET___Breast_Cancer
 {
     class CancerData
