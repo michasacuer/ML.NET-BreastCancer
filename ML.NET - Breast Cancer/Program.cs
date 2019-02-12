@@ -23,6 +23,7 @@ namespace ML.NET___Breast_Cancer
 
             var testData = mlContext.Data.ReadFromTextFile<CancerData>("Cancer-test.csv", hasHeader: true, separatorChar: ';');
             var metrics = mlContext.BinaryClassification.Evaluate(model.Transform(testData), label: "Target");
+            ;
             //PredictionModel<CancerData, CancerPrediction> model = Train();
             //Evaluate(model);
         }
