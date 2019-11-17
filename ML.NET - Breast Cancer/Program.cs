@@ -8,6 +8,7 @@
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("----------Preparing data----------\n");
             var mlContext = new MLContext();
             var trainData = mlContext.Data.LoadFromTextFile<CancerData>("Cancer-train.csv", hasHeader: true, separatorChar: ';');
             var targetMap = new Dictionary<string, bool> { { "M", true }, { "B", false } };
@@ -20,13 +21,19 @@
                     .Trainers
                     .SdcaLogisticRegression(labelColumnName: "Target", featureColumnName: "Features"));
 
+            Console.WriteLine("----------Training Model----------\n");
             var model = pipeline.Fit(trainData);
 
+            Console.WriteLine("----------Testing model----------\n");
             var testData = mlContext.Data.LoadFromTextFile<CancerData>("Cancer-test.csv", hasHeader: true, separatorChar: ';');
             var metrics = mlContext.BinaryClassification.Evaluate(model.Transform(testData), labelColumnName: "Target");
 
-            Console.WriteLine(metrics.Accuracy);
+            Console.WriteLine("----------Score----------");
+            Console.WriteLine($"Accuracy: {metrics.Accuracy}");
+            Console.WriteLine($"F1 Score: {metrics.F1Score}");
+            Console.WriteLine($"Log Loss: {metrics.LogLoss}");
+            Console.WriteLine($"Entropy: {metrics.Entropy}");
             Console.ReadLine();
-        } 
+        }
     }
 }
